@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/frame"
+    android:focusable="true">
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        class="com.google.android.gms.maps.SupportMapFragment" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Info"
+        android:id="@+id/button2"
+        android:layout_gravity="left|bottom" />
+
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <item android:id="@+id/menu_walking"
+            android:title="Walking"
+            android:showAsAction="ifRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <item android:id="@+id/menu_sitting"
+            android:title="Sitting"
+            android:showAsAction="ifRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </menu>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go"
+        android:id="@+id/button3"
+        android:layout_gravity="right|bottom" />
+
+</FrameLayout>
